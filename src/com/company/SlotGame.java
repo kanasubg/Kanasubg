@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
-import     java.awt.image.ImageObserver;
+import java.awt.image.ImageObserver;
 import java.awt.Graphics;
 import java.applet.*;
 
@@ -18,12 +18,13 @@ import java.awt.event.ActionListener;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
-public class SlotGame extends JFrame implements ItemListener {
+public class SlotGame extends JFrame {
 
     private static int creditt = 100;
     private static int bett = 2;
     private int winn = 0;
     private JButton spin;
+
     private JButton c;
     private JButton d;
     private JButton h;
@@ -33,11 +34,14 @@ public class SlotGame extends JFrame implements ItemListener {
     private JButton l;
     private JButton ea;
     private JButton w;
+
     private JLabel credit;
     private JLabel bet;
     private JLabel win;
     private Font bFont;
     private Font bigFont;
+
+
     private Icon coin;
     private Icon dragon;
     private Icon helmet;
@@ -47,8 +51,6 @@ public class SlotGame extends JFrame implements ItemListener {
     private Icon lion;
     private Icon earth;
     private Icon wizard;
-    BufferedImage coin34;
-    BufferedImage  dragon34;
 
 
     public SlotGame() {
@@ -142,52 +144,81 @@ public class SlotGame extends JFrame implements ItemListener {
         thehandler handler = new thehandler();
         spin.addActionListener(handler);
 
-    }
-
-    @Override
-    public void itemStateChanged(ItemEvent e) {
-        repaint();
 
     }
-
-    public void paint(){
-
-    }
-
 
     private class thehandler implements ActionListener {
 
 
         public void actionPerformed(ActionEvent event) {
 
-            ArrayList<String> namesList = new ArrayList<String>(Arrays.asList( "") );
 
-            List<JButton> listE = Arrays.asList(c, d, h, y, e, r, l, ea, w);
+            List<JButton> listE1 = Arrays.asList(c, d, h, y, e, r, l, ea, w);
+
             Random rand = new Random();
-            Object randomElement = listE.get(rand.nextInt(listE.size()));
-
-//            try {
-//                 coin34 = ImageIO.read(new File("C:\\Users\\User\\Desktop\\Kanasubg\\pictures\\6rose_299x300.jpg"));
-//                dragon34 = ImageIO.read(new File("C:\\Users\\User\\Desktop\\Kanasubg\\pictures\\helmet_299x300.jpg"));
-//
-//
-//            } catch (IOException ex) {
-//                ex.printStackTrace();
-//            }
-//
-//
-//            List<BufferedImage> listElements = new ArrayList<>();
-//            listElements.add(coin34);
-//            listElements.add(dragon34);
-//
-//
-//                Random rand = new Random();
-//            Object randomElement = listElements.get(rand.nextInt(listElements.size()));
-//            ((BufferedImage) randomElement).getSubimage(15, 15, 303, 303);
-//            ((BufferedImage) randomElement).getSubimage(360, 15, 303, 303);
-//            ((BufferedImage) randomElement).getTileGridXOffset();
 
 
+
+            JButton randomElement1 = listE1.get(rand.nextInt(listE1.size()));
+            randomElement1.setBounds( 15, 15, 303, 303);
+            randomElement1.setVisible(true);
+            randomElement1.repaint();
+            randomElement1.revalidate();
+
+
+            JButton randomElement2 =listE1.get(rand.nextInt(listE1.size()));
+            randomElement2.setBounds( 360, 15, 303, 303);
+            randomElement2.setVisible(true);
+            randomElement2.repaint();
+            randomElement2.revalidate();
+
+
+            JButton randomElement3 = listE1.get(rand.nextInt(listE1.size()));
+            randomElement3.setBounds( 710, 15, 303, 303);
+            randomElement3.setVisible(true);
+            randomElement3.repaint();
+            randomElement3.revalidate();
+
+
+            JButton randomElement4 = listE1.get(rand.nextInt(listE1.size()));
+            randomElement4.setBounds( 15, 360, 303, 303);
+            randomElement4.setVisible(true);
+            randomElement4.repaint();
+            randomElement4.revalidate();
+
+
+            JButton randomElement5 = listE1.get(rand.nextInt(listE1.size()));
+            randomElement5.setBounds( 360, 360, 303, 303);
+            randomElement5.setVisible(true);
+            randomElement5.repaint();
+            randomElement5.revalidate();
+
+
+            JButton randomElement6 = listE1.get(rand.nextInt(listE1.size()));
+            randomElement6.setBounds( 710, 360, 303, 303);
+            randomElement6.setVisible(true);
+            randomElement6.repaint();
+            randomElement6.revalidate();
+
+
+            JButton randomElement7 = listE1.get(rand.nextInt(listE1.size()));
+            randomElement7.setBounds( 15, 710, 303, 303);
+            randomElement7.setVisible(true);
+            randomElement7.repaint();
+            randomElement7.revalidate();
+
+
+            JButton randomElement8 =listE1.get(rand.nextInt(listE1.size()));
+            randomElement8.setBounds( 360, 710, 303, 303);
+            randomElement8.setVisible(true);
+            randomElement8.repaint();
+            randomElement8.revalidate();
+
+            JButton randomElement9 = listE1.get(rand.nextInt(listE1.size()));
+            randomElement9.setBounds( 710, 710, 303, 303);
+            randomElement9.setVisible(true);
+            randomElement9.repaint();
+            randomElement9.revalidate();
 
 
         }
