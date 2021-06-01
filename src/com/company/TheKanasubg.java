@@ -12,7 +12,10 @@ public class TheKanasubg  {
 
     public static void main(String[] args) throws IOException {
 
-        SlotGame kanasubg = new SlotGame();
+       SlotGame kanasubg = new SlotGame();
+
+
+
 
 
     }
